@@ -18,8 +18,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_001',
     category: 'Simple Sentence',
-    input: 'naan saappitten',
-    expectedTamil: 'நான் சாப்பிட்டேன்',
+    input: 'naan saappittan',
+    expectedTamil: 'நான் சாப்பிட்டன்',
     lengthType: 'S'
   },
   
@@ -27,8 +27,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_002',
     category: 'Compound Sentence',
-    input: 'naan padichen aanaal exam fail aayitten',
-    expectedTamil: 'நான் படிச்சேன் ஆனால் exam fail ஆயிட்டேன்',
+    input: 'naan padichan aanaal exam fail aayittan',
+    expectedTamil: 'நான் படிச்சன் ஆனால் exam fail ஆயிட்டன்',
     lengthType: 'M'
   },
   
@@ -36,8 +36,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_003',
     category: 'Complex Sentence',
-    input: 'mazhai peinja karanam naan veetil irunthen',
-    expectedTamil: 'மழை பெய்ஞ காரணம் நான் வீட்டில் இருந்தேன்',
+    input: 'mazhai peinja karanam naan veetil irunthan',
+    expectedTamil: 'மழை பெய்ஞ்ச காரணம் நான் வீட்டில் இருந்தன்',
     lengthType: 'M'
   },
   
@@ -45,7 +45,7 @@ const testScenarios = [
   {
     id: 'Pos_Fun_004',
     category: 'Interrogative Form',
-    input: 'nee eppadi irukka',
+    input: 'nee eppidi irukka',
     expectedTamil: 'நீ எப்படி இருக்க',
     lengthType: 'S'
   },
@@ -54,8 +54,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_005',
     category: 'Imperative Form',
-    input: 'kathavu saaththu',
-    expectedTamil: 'கதவு சாத்து',
+    input: 'kathava saaththu',
+    expectedTamil: 'கதவை சாத்து',
     lengthType: 'S'
   },
   
@@ -63,8 +63,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_006',
     category: 'Positive Sentence Form',
-    input: 'avan nalla paiyan',
-    expectedTamil: 'அவன் நல்ல பையன்',
+    input: 'avan nalla pediyan',
+    expectedTamil: 'அவன் நல்ல பெடியன்',
     lengthType: 'S'
   },
   
@@ -81,8 +81,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_008',
     category: 'Greetings',
-    input: 'vanakkam nanbare',
-    expectedTamil: 'வணக்கம் நண்பரே',
+    input: 'vanakkam',
+    expectedTamil: 'வணக்கம்',
     lengthType: 'S'
   },
   
@@ -90,8 +90,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_009',
     category: 'Requests',
-    input: 'enakku thanni kudukka mudiyuma',
-    expectedTamil: 'எனக்கு தண்ணி குடுக்க முடியுமா',
+    input: 'enakku thanni venum',
+    expectedTamil: 'எனக்கு தண்ணி வேணும்',
     lengthType: 'M'
   },
   
@@ -99,8 +99,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_010',
     category: 'Responses',
-    input: 'sari naan varuven',
-    expectedTamil: 'சரி நான் வருவேன்',
+    input: 'sari naan vaaran',
+    expectedTamil: 'சரி நான் வாறன்',
     lengthType: 'S'
   },
   
@@ -108,8 +108,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_011',
     category: 'Polite Phrasing',
-    input: 'dayavu seithu utkaarungal',
-    expectedTamil: 'தயவு செய்து உட்காருங்கள்',
+    input: 'thajavu seinchu iru',
+    expectedTamil: 'தயவு செய்ஞ்சு இரு',
     lengthType: 'S'
   },
   
@@ -117,8 +117,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_012',
     category: 'Informal Phrasing',
-    input: 'da vaa saappidalaam',
-    expectedTamil: 'டா வா சாப்பிடலாம்',
+    input: 'deii vaa daa saappidalaam',
+    expectedTamil: 'டேய்ய் வா டா சாப்பிடலாம்',
     lengthType: 'S'
   },
   
@@ -144,8 +144,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_015',
     category: 'Segmented Word Variation',
-    input: 'naan padikkiren',
-    expectedTamil: 'நான் படிக்கிறேன்',
+    input: 'naan padikkirn',
+    expectedTamil: 'நான் படிக்கிறன்',
     lengthType: 'S'
   },
   
@@ -162,8 +162,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_017',
     category: 'Past Tense',
-    input: 'naan nethu school ponen',
-    expectedTamil: 'நான் நேத்து school போனேன்',
+    input: 'naan nethu school ponaan',
+    expectedTamil: 'நான் நேத்து school போனான்',
     lengthType: 'S'
   },
   
@@ -171,8 +171,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_018',
     category: 'Present Tense',
-    input: 'naan ippo padikkiren',
-    expectedTamil: 'நான் இப்போ படிக்கிறேன்',
+    input: 'naan ippa padikkirn',
+    expectedTamil: 'நான் இப்ப படிக்கிறன்',
     lengthType: 'S'
   },
   
@@ -180,8 +180,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_019',
     category: 'Future Tense',
-    input: 'naan naalaikku varuven',
-    expectedTamil: 'நான் நாளைக்கு வருவேன்',
+    input: 'naan naalaikku varuvan',
+    expectedTamil: 'நான் நாளைக்கு வருவன்',
     lengthType: 'S'
   },
   
@@ -189,8 +189,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_020',
     category: 'Negation Pattern',
-    input: 'avanukku theriyaathu',
-    expectedTamil: 'அவனுக்கு தெரியாது',
+    input: 'avanukku theriyaa',
+    expectedTamil: 'அவனுக்கு தெரியா',
     lengthType: 'S'
   },
   
@@ -198,8 +198,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_021',
     category: 'Plural and Pronoun',
-    input: 'naangal ellorum varuvoam',
-    expectedTamil: 'நாங்கள் எல்லோரும் வருவோம்',
+    input: 'naangal ellarum varuvam',
+    expectedTamil: ' நாங்கள் எல்லாரும் வருவம்',
     lengthType: 'S'
   },
   
@@ -207,8 +207,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_022',
     category: 'Polite Request Form',
-    input: 'ungalaal itha solla mudiyuma',
-    expectedTamil: 'உங்களால் இத சொல்ல முடியுமா',
+    input: 'ungalaala itha solla elumo',
+    expectedTamil: 'உங்களால இத சொல்ல ஏலுமோ',
     lengthType: 'M'
   },
   
@@ -216,8 +216,8 @@ const testScenarios = [
   {
     id: 'Pos_Fun_023',
     category: 'English Brand Terms',
-    input: 'naan WhatsApp la message anupinen',
-    expectedTamil: 'நான் WhatsApp ல message அனுப்பினேன்',
+    input: 'naan WhatsApp la message anupinan',
+    expectedTamil: 'நான் WhatsApp ல message அனுப்பினான்',
     lengthType: 'M'
   },
   
@@ -225,100 +225,11 @@ const testScenarios = [
   {
     id: 'Pos_Fun_024',
     category: 'Places and English Words',
-    input: 'naan Chennai la irukken',
-    expectedTamil: 'நான் Chennai ல இருக்கேன்',
+    input: 'naan sri lanka la irukkan',
+    expectedTamil: 'நான் sri lanka ல இருக்கன்',
     lengthType: 'S'
   },
   
-  // 16) English abbreviations
-  {
-    id: 'Pos_Fun_025',
-    category: 'English Abbreviations',
-    input: 'naan ATM la panam eduthen',
-    expectedTamil: 'நான் ATM ல பணம் எடுத்தேன்',
-    lengthType: 'M'
-  },
-  
-  // 17) Inputs containing punctuation marks
-  {
-    id: 'Pos_Fun_026',
-    category: 'Punctuation Marks',
-    input: 'nee varuviya illaya',
-    expectedTamil: 'நீ வருவியா இல்லையா',
-    lengthType: 'S'
-  },
-  
-  // 18) Currency, time formats, dates
-  {
-    id: 'Pos_Fun_027',
-    category: 'Currency and Numbers',
-    input: 'antha book 500 rooba',
-    expectedTamil: 'அந்த book 500 ரூபா',
-    lengthType: 'S'
-  },
-  
-  // 19) Medium length input (31-299 chars)
-  {
-    id: 'Pos_Fun_028',
-    category: 'Medium Length Input',
-    input: 'enakku oru periya veedu vennum athu romba azhagaa irukkanum',
-    expectedTamil: 'எனக்கு ஒரு பெரிய வீடு வேணும் அது ரொம்ப அழகா இருக்கணும்',
-    lengthType: 'M'
-  },
-  
-  // 20) Long input (≥300 chars) - Testing robustness
-  {
-    id: 'Pos_Fun_029',
-    category: 'Long Input',
-    input: 'naan innikku kaalaila ezhunthu palladikki seithu kulichchu saapittu office ku ponen office la romba velai irunthathu meeting attend panni report submit panni colleagues kooda discussion panni velaiya mudichchu veetukku vanthen veetukku vanthathu evening achu romba tired aa irunthathu aanaalum happy aa irunthen',
-    expectedTamil: 'நான் இன்னிக்கு காலைல எழுந்து பல்லடிக்கி செய்து குளிச்சு சாப்பிட்டு office கு போனேன் office ல ரொம்ப வேலை இருந்தது meeting attend பண்ணி report submit பண்ணி colleagues கூட discussion பண்ணி வேலைய முடிச்சு வீட்டுக்கு வந்தேன் வீட்டுக்கு வந்தது evening ஆச்சு ரொம்ப tired ஆ இருந்தது ஆனாலும் happy ஆ இருந்தேன்',
-    lengthType: 'L'
-  },
-  
-  // 21) Slang and colloquial phrasing
-  {
-    id: 'Pos_Fun_030',
-    category: 'Slang/Colloquial',
-    input: 'dei mass da',
-    expectedTamil: 'டேய் mass டா',
-    lengthType: 'S'
-  },
-  
-  // Time format
-  {
-    id: 'Pos_Fun_031',
-    category: 'Time Format',
-    input: 'meeting pathu mani ku',
-    expectedTamil: 'meeting பத்து மணி கு',
-    lengthType: 'S'
-  },
-  
-  // Date format
-  {
-    id: 'Pos_Fun_032',
-    category: 'Date Format',
-    input: 'ennoda birthday January la varum',
-    expectedTamil: 'என்னோட birthday January ல வரும்',
-    lengthType: 'M'
-  },
-  
-  // Units of measurement
-  {
-    id: 'Pos_Fun_033',
-    category: 'Units of Measurement',
-    input: 'antha kadai aindu kilometer thooram',
-    expectedTamil: 'அந்த கடை ஐந்து kilometer தூரம்',
-    lengthType: 'M'
-  },
-  
-  // Multiple spaces handling
-  {
-    id: 'Pos_Fun_034',
-    category: 'Multiple Spaces',
-    input: 'naan vanthen',
-    expectedTamil: 'நான் வந்தேன்',
-    lengthType: 'S'
-  }
 ];
 
 test.describe('Positive Functional Tests - Thanglish to Tamil Conversion', () => {

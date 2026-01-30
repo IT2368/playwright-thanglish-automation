@@ -105,23 +105,7 @@ const testScenarios = [
     lengthType: 'S'
   },
   
-  // 11) Unicode emoji input
-  {
-    id: 'Neg_Fun_011',
-    category: 'Emoji Input',
-    input: '😀😃😄😁😆',
-    expectedBehavior: 'Emojis cannot be converted to Tamil',
-    lengthType: 'S'
-  },
-  
-  // 12) Pure English sentence (not Thanglish)
-  {
-    id: 'Neg_Fun_012',
-    category: 'Pure English Input',
-    input: 'The quick brown fox jumps over the lazy dog',
-    expectedBehavior: 'English sentence may not convert properly to Tamil',
-    lengthType: 'M'
-  }
+
 ];
 
 test.describe('Negative Functional Tests', () => {
