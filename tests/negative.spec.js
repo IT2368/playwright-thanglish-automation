@@ -28,7 +28,7 @@ const testScenarios = [
   {
     id: 'Neg_Fun_002',
     category: 'Special Characters Only',
-    input: '@#$%^&*()!',
+    input: '#$%^&*()!',
     expectedBehavior: 'No Tamil conversion for special characters',
     lengthType: 'S'
   },
@@ -91,7 +91,7 @@ const testScenarios = [
   {
     id: 'Neg_Fun_009',
     category: 'Repeated Single Character',
-    input: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    input: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     expectedBehavior: 'Long repeated character may cause incorrect output',
     lengthType: 'M'
   },

@@ -1,15 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-/**
- * UI Test Cases for Thanglish to Tamil Conversion
- * Website: https://tamil.changathi.com/
- * 
- * Test Case ID Convention: Pos_UI_XXX, Neg_UI_XXX
- * 
- * This tests the user interface behavior and usability
- */
-
-test.describe('UI Tests', () => {
+test.describe('Positive UI Tests', () => {
 
   test.beforeEach(async ({ page }) => {
     await page.goto('https://tamil.changathi.com/', {
@@ -20,12 +11,6 @@ test.describe('UI Tests', () => {
 
   // Positive UI Test: Real-time output updating
   test('Pos_UI_001 - Real-time Output Updating', async ({ page }) => {
-    /**
-     * Test Case: Pos_UI_001
-     * Category: Real-time Output Update
-     * Description: Verify that the Tamil output is generated automatically in real-time
-     *              as the user types Thanglish input and presses space.
-     */
     
     // Step 1: Locate the textarea
     const textarea = page.locator('#transliterateTextarea');
@@ -71,4 +56,48 @@ test.describe('UI Tests', () => {
     console.log(`Result: PASS`);
     console.log(`========================================\n`);
   });
+
+});
+
+test.describe('Negative UI Tests', () => {
+
+  test.beforeEach(async ({ page }) => {
+    await page.goto('https://tamil.changathi.com/', {
+      waitUntil: 'networkidle',
+      timeout: 60000
+    });
+  });
+
+  // Negative UI Test: Special characters input
+  test('Neg_UI_001 - Special Characters Input Handling', async ({ page }) => {
+
+    const textarea = page.locator('#transliterateTextarea');
+    await expect(textarea).toBeVisible();
+    
+    await textarea.click();
+    await textarea.clear();
+    
+    await textarea.type('!@#$%^&*()_+{}|:"<>? ', { delay: 50 });
+    await page.waitForTimeout(1500);
+    
+    const output = await textarea.inputValue();
+    
+    // Page should remain functional
+    const pageUrl = page.url();
+    expect(pageUrl).toContain('changathi');
+    
+    // Textarea should still be editable
+    await expect(textarea).toBeEditable();
+    
+    console.log(`\n========================================`);
+    console.log(`Test ID: Neg_UI_001`);
+    console.log(`Category: Special Characters`);
+    console.log(`Input: !@#$%^&*()_+{}|:"<>?`);
+    console.log(`Output: "${output.trim()}"`);
+    console.log(`Page Functional: Yes`);
+    console.log(`Textarea Still Editable: Yes`);
+    console.log(`Result: System handled special characters gracefully`);
+    console.log(`========================================\n`);
+  });
+
 });
