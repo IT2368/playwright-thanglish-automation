@@ -1,17 +1,5 @@
 const { test, expect } = require('@playwright/test');
 
-/**
- * Positive Functional Test Cases for Thanglish to Tamil Conversion
- * Website: https://tamil.changathi.com/
- * 
- * Test Case ID Convention: Pos_Fun_XXX
- * Input Length Types: S (≤30 chars), M (31-299 chars), L (≥300 chars)
- * 
- * How the website works:
- * - Type Thanglish text in the textarea
- * - Press SPACE after each word to trigger conversion
- * - The Tamil text replaces the Thanglish in the SAME textarea
- */
 
 const testScenarios = [
   // 1A) Simple Sentences

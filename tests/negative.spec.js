@@ -1,18 +1,5 @@
 const { test, expect } = require('@playwright/test');
 
-/**
- * Negative Functional Test Cases for Thanglish to Tamil Conversion
- * Website: https://tamil.changathi.com/
- * 
- * These test cases verify scenarios where the system fails or behaves incorrectly.
- * Test Case ID Convention: Neg_Fun_XXX
- * Input Length Types: S (≤30 chars), M (31-299 chars), L (≥300 chars)
- * 
- * How the website works:
- * - Type Thanglish text in the textarea
- * - Press SPACE after each word to trigger conversion
- * - The Tamil text replaces the Thanglish in the SAME textarea
- */
 
 const testScenarios = [
   // 1) Only numeric input - System should not produce meaningful Tamil
@@ -119,12 +106,8 @@ test.describe('Negative Functional Tests', () => {
 
   for (const scenario of testScenarios) {
     test(`${scenario.id} - ${scenario.category}`, async ({ page }) => {
-      /**
-       * Test Case: ${scenario.id}
-       * Category: ${scenario.category}
-       * Expected Behavior: ${scenario.expectedBehavior}
-       */
-      
+     
+     
       // Step 1: Locate the textarea
       const textarea = page.locator('#transliterateTextarea');
       await expect(textarea).toBeVisible();
@@ -150,12 +133,6 @@ test.describe('Negative Functional Tests', () => {
       
       // Check if Tamil characters are present
       const hasTamilChars = /[\u0B80-\u0BFF]/.test(output);
-      
-      // For negative cases, we document the behavior
-      // - Output may be empty
-      // - Output may be same as input (no conversion)
-      // - Output may have incorrect Tamil
-      // - Page should still be functional
       
       // Log test details for documentation
       console.log(`\n========================================`);
